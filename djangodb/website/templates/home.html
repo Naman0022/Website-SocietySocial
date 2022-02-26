@@ -1,11 +1,12 @@
-<html>
-<head></head>
-<body>
-    <p>Chutiya world</p>
-    {% for item in all %}
-        {{ item.fname }} {{ item.lname}}
-        <p>Email : {{item.email}}</p>
-        {{item.age}}
-    {% endfor %}
-</body>   
-</html>
+{% extends 'base.html' %}
+{% block content %}
+
+<h>Members Database</h>
+
+<p>hola world</p>
+{% for item in all %}
+    {{ item.fname }} {{ item.lname}}
+    <p>Email : {{item.email}}</p>
+    {{item.age}}
+{% endfor %}
+{% endblock %}
